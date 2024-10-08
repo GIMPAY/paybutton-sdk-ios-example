@@ -38,7 +38,7 @@ class ViewController: UIViewController {
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
-        AppName.text = "PaySky PayButton SDK"
+        AppName.text = "GIM PayButton SDK"
 
         MerchantIdLabel.text = "Merchant ID"
         MerchantIdEd.text = "49660" // set your merchant id here
@@ -110,7 +110,7 @@ class ViewController: UIViewController {
 
     @IBAction func didTapTransactionStatusLabel(_ sender: UIButton) {
         if receipt?.success == true {
-            print(receipt)
+            print(receipt ?? "")
         }
     }
 }

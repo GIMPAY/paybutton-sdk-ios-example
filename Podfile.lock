@@ -3,7 +3,7 @@ PODS:
   - DLRadioButton (1.4.12)
   - DynamicBlurView (4.1.0)
   - MOLH (1.4.3)
-  - PayButtonIOS (1.2.0):
+  - PayButtonIOS (1.0.0):
     - Alamofire (~> 5.0.5)
     - DLRadioButton (~> 1.4.12)
     - MOLH (~> 1.4.3)
@@ -14,7 +14,7 @@ PODS:
     - DynamicBlurView (~> 4.0)
 
 DEPENDENCIES:
-  - PayButtonIOS (from `https://github.com/payskyCompany/PayButtonIOS.git`, branch `master`)
+  - PayButtonIOS (from `https://github.com/GIMPAY/paybutton-sdk-ios.git`, branch `master`)
 
 SPEC REPOS:
   trunk:
@@ -28,22 +28,22 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   PayButtonIOS:
     :branch: master
-    :git: https://github.com/payskyCompany/PayButtonIOS.git
+    :git: https://github.com/GIMPAY/paybutton-sdk-ios.git
 
 CHECKOUT OPTIONS:
   PayButtonIOS:
-    :commit: 68f5785d4f47123f1ceb55c6eff36026912ef0d1
-    :git: https://github.com/payskyCompany/PayButtonIOS.git
+    :commit: ad95161a74fbba05ca25b944005bb517606aebbe
+    :git: https://github.com/GIMPAY/paybutton-sdk-ios.git
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
   MOLH: e45827d200aeb1310641090fd8cd03ad2b42ae72
-  PayButtonIOS: cb9274219da1138ad709e1f8aa24cbd3e60f9852
+  PayButtonIOS: f80c44aaecb6f4f094d7503dfccab4e141f79f41
   PayCardsRecognizer: 2e4d1b2fdd5f1528fb56064a91e1d58a1af7a2db
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
 
-PODFILE CHECKSUM: 5bac6dd7b2773cbab3848b3cfc82c53bfe0896ee
+PODFILE CHECKSUM: 90843f824ba7c1493f95656a2afa92731f15deac
 
 COCOAPODS: 1.15.2

@@ -7,7 +7,7 @@ target 'PayButtonExample' do
   use_frameworks!
  
   # Pods for PayButtonExample
-  pod 'PayButtonIOS', :git => 'https://github.com/payskyCompany/PayButtonIOS.git', :branch => 'master'
+  pod 'PayButtonIOS', :git => 'https://github.com/GIMPAY/paybutton-sdk-ios.git', :branch => 'master'
 
 end
 
