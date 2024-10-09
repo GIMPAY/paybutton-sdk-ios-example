@@ -21,7 +21,9 @@ pod init
 3. Add the pod to your Podfile:
 **Open Podfile** with any text editor tool then add the next line inside "target 'PayButton' do "scoop 
 
+```
 source 'https://github.com/CocoaPods/Specs.git'
+```
 
 ```
 pod 'GIMPayButtonIOS'
