@@ -6,12 +6,13 @@
 //  Copyright © 2020 PaySky. All rights reserved.
 //
 
-import PayButtonIOS
+import GIMPayButtonIOS
 import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var transactionStatusLabel: UIButton!
     @IBOutlet weak var AppName: UILabel!
+    @IBOutlet weak var mobileNumber: UITextField!
     @IBOutlet weak var MerchantIdEd: UITextField!
     @IBOutlet weak var MerchantIdLabel: UILabel!
     @IBOutlet weak var TerminalIDTF: UITextField!
@@ -40,11 +41,12 @@ class ViewController: UIViewController {
 
         AppName.text = "GIM PayButton SDK"
 
+        mobileNumber.text = "01140245757"
         MerchantIdLabel.text = "Merchant ID"
-        MerchantIdEd.text = "49660" // set your merchant id here
+        MerchantIdEd.text = "10442227306" // set your merchant id here
 
         TerminalIDLabel.text = "Terminal ID"
-        TerminalIDTF.text = "32731520" // set your terminal id here
+        TerminalIDTF.text = "20734388" // set your terminal id here
 
         AmountLabel.text = "Amount"
         AmountEd.text = "50.50" // set your amount here
@@ -53,12 +55,13 @@ class ViewController: UIViewController {
         RefValue.text = "732432535" // set a unique number for your transaction
 
         CurrencyLabel.text = "Currency Code"
-        CurrencyEd.text = "818" // set country currency code, e.g. Egypt is 818
+        CurrencyEd.text = "952" // set country currency code, e.g. Egypt is 818
 
         PayBtn.setTitle("Pay Now", for: .normal)
         PayBtn.layer.cornerRadius = 10
 
         ChangeLang.setTitle("Change Lang", for: .normal)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,8 +83,9 @@ class ViewController: UIViewController {
             terminalId: TerminalIDTF.text!, // Mandatory
             amount: Double(AmountEd.text ?? "0.0") ?? 0, // Mandatory - provide the amount and currency with it's decimal factor
             currencyCode: Int(CurrencyEd.text!) ?? 0, // Mandatory - Provided by PaySky
-            secureHashKey: "57d29e75443b0f2ef4a1d83adfb1ab3d", // Mandatory - Provided by PaySky
+            secureHashKey: "e87a15e7048f97da99d305db75e3241a", // Mandatory - Provided by PaySky
             trnxRefNumber: RefValue.text ?? "",
+            customerMobile: mobileNumber.text ?? "",
             isProduction: false // Choose the needed environment
         )
 
@@ -116,7 +120,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: PayButtonDelegate {
-    func finishedSdkPayment(_ response: PayButtonIOS.PayByCardReponse) {
+    func finishedSdkPayment(_ response: GIMPayButtonIOS.PayByCardReponse) {
         self.receipt = response
         
         if response.success == true {

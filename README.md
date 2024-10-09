@@ -20,8 +20,11 @@ pod init
 ```
 3. Add the pod to your Podfile:
 **Open Podfile** with any text editor tool then add the next line inside "target 'PayButton' do "scoop 
+
+source 'https://github.com/CocoaPods/Specs.git'
+
 ```
-pod 'PayButtonIOS', :git => 'https://github.com/GIMPAY/paybutton-sdk-ios.git', :branch => 'master'
+pod 'GIMPayButtonIOS'
 ```
 4. Open the terminal and run
 ```
@@ -74,7 +77,7 @@ In order to use the SDK you should use a production merchantId, terminalId and s
 ### 👉 Usage/Examples 
 In the class you want to intiate the payment from, you should import the framework
 ```swift
-import PayButtonIOS
+import GIMPayButtonIOS
 ```
 
 After the import, create a new instance from PayButton
@@ -103,7 +106,7 @@ In order to create transaction callback in delegate PaymentDelegate, implement d
 
 ```swift 
 extension ViewController: PayButtonDelegate {
-     func finishedSdkPayment(_ response: PayButtonIOS.PayByCardReponse) {
+     func finishedSdkPayment(_ response: GIMPayButtonIOS.PayByCardReponse) {
         if response.success == true {
             print("Transaction completed successfully")
             print(response.networkReference ?? "") // reference number of transaction.
@@ -139,4 +142,4 @@ extension ViewController: PayButtonDelegate {
 
 
 ## 👀 SDK Repo
-[PayButtonIOS SDK](https://github.com/GIMPAY/paybutton-sdk-ios.git)
+[GIMPayButtonIOS SDK](https://github.com/GIMPAY/paybutton-sdk-ios.git)
